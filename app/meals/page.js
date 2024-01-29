@@ -1,3 +1,21 @@
-export default function MealPage() {
-    return <h1>Meal</h1>
+import classes from './page.module.css'
+import Link from "next/link";
+
+export default function MealsPage() {
+    return (<>
+            <header className={classes.header}>
+                <h1>
+                    Delicious meals, created <span>by you</span>
+                </h1>
+                <p>
+                    Choose your favorite recipe and cook it yourself
+                </p>
+                <p className={classes.cta}>
+                    <Link href={"/meals/share"}>
+                        Share Your Favorite Recipe
+                    </Link>
+                </p>
+            </header>
+            <main className={classes.main}></main>
+        </>)
 }
